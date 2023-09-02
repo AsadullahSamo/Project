@@ -78,6 +78,7 @@
 .img {
   width: 630px;
   height: 100%;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 500px) {
@@ -89,5 +90,6 @@
   .img {
     width: 100%;
     height: auto;
+    margin: auto;
   }
 }

@@ -120,7 +120,7 @@ const [prevIndex, setPrevIndex] = useState(0);
           className={`lg:mt-5 mt-10 w-[79%] h-[90vh] animate__animated`}
           // style={{ backgroundColor: props.bgColorSection1 }}
         >
-          <img src={`/assets/${props.img}`} alt={props.alt} className={`ml-5 ${styles.img} object-cover mr-5`} loading='lazy'/>
+          <img src={`/assets/${props.img}`} alt={props.alt} className={`${styles.img} object-cover`} loading='lazy'/>
         </section>
       
       
