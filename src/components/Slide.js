@@ -100,10 +100,10 @@ const [prevIndex, setPrevIndex] = useState(0);
 
   useEffect(() => {
     let section1 = document.getElementById("section1");
-    section1.classList.add(prevIndex < props.activeIndex ? "animate__slideInDown" : "animate__slideInLeft");
+    section1.classList.add(prevIndex < props.activeIndex ? "animate__slideInRight" : "animate__slideInLeft");
 
     setTimeout(() => {
-      section1.classList.remove("animate__slideInDown");
+      section1.classList.remove("animate__slideInRight");
       section1.classList.remove("animate__slideInLeft");
     }, 1000);
 
@@ -120,7 +120,7 @@ const [prevIndex, setPrevIndex] = useState(0);
           className={`lg:mt-5 mt-10 w-[79%] h-[90vh] animate__animated`}
           // style={{ backgroundColor: props.bgColorSection1 }}
         >
-          <img src={`/assets/${props.img}`} alt={props.alt}  className={`ml-5 md:w-[630px] w-[100%] md:h-full h-[520px] object-cover mr-5`} loading='lazy'/>
+          <img src={`/assets/${props.img}`} alt={props.alt} className={`ml-5 ${styles.img} object-cover mr-5`} loading='lazy'/>
         </section>
       
       
