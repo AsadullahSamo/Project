@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from '../styles/Home.module.css'
 import { TypeAnimation } from "react-type-animation";
-import Hamburger from "@/components/Hamburger";
 import VerticalMenu from "@/components/VerticalMenu";
 
 export default function Home() {
@@ -38,7 +37,7 @@ export default function Home() {
   const [isMobileMode, setIsMobileMode] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", () => {
-      if(window.innerWidth <= 724){
+      if(window.innerWidth <= 824){
         setIsMobileMode(true);      
       } else {
         setIsMobileMode(false);      
