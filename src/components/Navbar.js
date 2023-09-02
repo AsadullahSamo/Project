@@ -27,13 +27,13 @@ export default function Navbar({ setActiveIndex, activeIndex }) {
     // Attach the event listeners when the component mounts
     window.addEventListener('keyup', handleKeyUp);
 
-    // window.addEventListener("keyup", (e) => {
-    //   e.preventDefault();
-    // })
+    window.addEventListener("keyup", (e) => {
+      e.preventDefault();
+    })
 
-    // window.addEventListener("keydown", (e) => {
-    //   e.preventDefault();
-    // })
+    window.addEventListener("keydown", (e) => {
+      e.preventDefault();
+    })
     // Remove the event listeners when the component unmounts
     return () => {
       window.removeEventListener('keyup', handleKeyUp);
