@@ -74,15 +74,15 @@ export default function Home() {
     
     { isMobileMode &&
       <div className="mt-5" id="vMenu" ref={vRef}>
-    <VerticalMenu
-      activeIndex={activeIndex}
-      setActiveIndex={setActiveIndex}
-      setMenuMargin={(margin) => {
-        // Set the margin in index.js based on the callback from VerticalMenu.js
-        vRef.current.style.marginBottom = margin;
-      }}
-    />
-  </div>
+      <VerticalMenu
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        setMenuMargin={(margin) => {
+          // Set the margin in index.js based on the callback from VerticalMenu.js
+          vRef.current.style.marginBottom = margin;
+        }}
+      />
+    </div>
 
     }
     
