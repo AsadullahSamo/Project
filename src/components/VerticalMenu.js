@@ -55,7 +55,7 @@ export default function VerticalMenu({ setActiveIndex, activeIndex, setMenuMargi
       <ul
         className={`${
           menuVisible ? 'block' : 'hidden'
-        } md:flex flex-col gap-[15px] items-center bg-[#49a6e9] text-black w-[100%]`}
+        } mt-8 md:flex flex-col gap-[15px] items-center bg-[#49a6e9] text-black w-[100%]`}
       >
         {liArray.map((index) => (
           <li
