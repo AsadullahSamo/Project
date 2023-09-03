@@ -76,6 +76,28 @@
   display: flex;
   justify-content: center;
 }
+.prev-button,
+.next-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  transform: scale(1.1);
+}
+
+.prev-button {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
+.next-button {
+  margin-left: 20px; /* Adjust spacing as needed */
+}
 
 @media screen and (max-width: 500px) {
   .font {
@@ -97,5 +119,8 @@
   }
   .section2Margin {
     margin-top: -55px;
+  }
+  .pMargin {
+    margin-top: -500px;
   }
 }

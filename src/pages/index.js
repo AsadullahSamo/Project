@@ -1,10 +1,11 @@
 import Slide from "@/components/Slide";
 import Navbar from "@/components/Navbar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import styles from '../styles/Home.module.css'
 import { TypeAnimation } from "react-type-animation";
 import VerticalMenu from "@/components/VerticalMenu";
+
 
 export default function Home() {
 
@@ -45,6 +46,19 @@ export default function Home() {
     })
   })
 
+  useEffect(() => {
+    const rotationInterval = setInterval(() => {
+      const nextIndex = (activeIndex + 1) % imgArray.length;
+      setActiveIndex(nextIndex);
+    }, 5000); // Rotate every 10 seconds
+
+    return () => {
+      clearInterval(rotationInterval);
+    };
+  }, [activeIndex]); // Ensure that the interval r
+
+  const vRef = useRef(null)
+  
   return (
 
     <>
@@ -59,9 +73,17 @@ export default function Home() {
     <main className="text-[#b7c7d8] bg-[#19191a]">
     
     { isMobileMode &&
-      <div className="mt-5">
-        <VerticalMenu activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-      </div>
+      <div className="mt-5" id="vMenu" ref={vRef}>
+    <VerticalMenu
+      activeIndex={activeIndex}
+      setActiveIndex={setActiveIndex}
+      setMenuMargin={(margin) => {
+        // Set the margin in index.js based on the callback from VerticalMenu.js
+        vRef.current.style.marginBottom = margin;
+      }}
+    />
+  </div>
+
     }
     
       
