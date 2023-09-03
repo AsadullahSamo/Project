@@ -130,7 +130,7 @@ const [prevIndex, setPrevIndex] = useState(0);
       <section className={`w-[79%] bg-[${props.bgColorSection2}] flex flex-col justify-center`}> {/* h-[93vh]  w-[79%]*/}
           
 
-        <p className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
+        <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
         
         <div className={`flex justify-center my-8 ${styles.section2Margin}`}>
           {/* <button className={`transition-all duration-1000 ${styles.btn} m-auto bg-[#0974d4] font-sans text-[22px] text-[#fff] px-3 py-1`} > {props.btnText} </button> */}

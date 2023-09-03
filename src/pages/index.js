@@ -46,16 +46,16 @@ export default function Home() {
     })
   })
 
-  useEffect(() => {
-    const rotationInterval = setInterval(() => {
-      const nextIndex = (activeIndex + 1) % imgArray.length;
-      setActiveIndex(nextIndex);
-    }, 5000); // Rotate every 10 seconds
+  // useEffect(() => {
+  //   const rotationInterval = setInterval(() => {
+  //     const nextIndex = (activeIndex + 1) % imgArray.length;
+  //     setActiveIndex(nextIndex);
+  //   }, 5000); // Rotate every 10 seconds
 
-    return () => {
-      clearInterval(rotationInterval);
-    };
-  }, [activeIndex]); // Ensure that the interval r
+  //   return () => {
+  //     clearInterval(rotationInterval);
+  //   };
+  // }, [activeIndex]); // Ensure that the interval r
 
   const vRef = useRef(null)
   
