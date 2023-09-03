@@ -6,7 +6,7 @@ export default function VerticalMenu({ setActiveIndex, activeIndex, setMenuMargi
   const [menuVisible, setMenuVisible] = useState(false);
 
   let liArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-  const liTextArray = ["Rat Park", "The Non Pro", "Take Fountain", "Freaks of The Industry", "Rat Parks Audio Book", "Excerpts", "Podcast", "Rat Park Shirt-", "Adam Novak"];
+  const liTextArray = ["Rat Park", "The Non Pro", "Take Fountain", "Freaks of The Industry", "Rat Parks Audio Book", "Excerpts", "Podcast", "Rat Park Shirt", "Adam Novak"];
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
