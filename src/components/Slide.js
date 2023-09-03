@@ -67,7 +67,7 @@ const renderButtons = () => {
         );
       case 7: // For slide 8
         return (
-          <div className='text-center mt-36'>
+          <div className='text-center mt-48'>
           
             <p className={`${styles.pMargin} ${styles.fontFamily} m-auto text-slate-200 text-[40px] w-[80%] font-semibold`}> Show your support and nab some Swag! </p> 
             <br />
