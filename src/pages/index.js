@@ -36,15 +36,13 @@ export default function Home() {
   const href = ["https://a.co/d/0p21mCR", "https://www.simonandschuster.com/books/The-Non-Pro/Adam-Novak/9781627934473", "https://a.co/d/a9RdKLg", "https://a.co/d/hEKXbFR", "https://a.co/d/a6r7baw", "", "", "", ""]
 
   const [isMobileMode, setIsMobileMode] = useState(false);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
+  const checkMobileMode = () => {
       if(window.innerWidth <= 824){
         setIsMobileMode(true);      
       } else {
         setIsMobileMode(false);      
       }
-    })
-  })
+  }
 
   // useEffect(() => {
   //   const rotationInterval = setInterval(() => {
@@ -56,6 +54,16 @@ export default function Home() {
   //     clearInterval(rotationInterval);
   //   };
   // }, [activeIndex]); // Ensure that the interval r
+
+  useEffect(() => {
+    checkMobileMode(); // Check on initial load
+
+    window.addEventListener("resize", checkMobileMode); // Check on window resize
+
+    return () => {
+      window.removeEventListener("resize", checkMobileMode); // Cleanup the event listener
+    };
+  }, []);
 
   const vRef = useRef(null)
   
@@ -72,20 +80,19 @@ export default function Home() {
 
     <main className="text-[#b7c7d8] bg-[#19191a]">
     
-    {isMobileMode ? (
-          <div className="mt-5" id="vMenu" ref={vRef}>
-            <VerticalMenu
-              activeIndex={activeIndex}
-              setActiveIndex={setActiveIndex}
-              setMenuMargin={(margin) => {
-                // Set the margin in index.js based on the callback from VerticalMenu.js
-                vRef.current.style.marginBottom = margin;
-              }}
-            />
-          </div>
-        ) : (
-          <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-    )}
+    { isMobileMode &&
+      <div className="mt-5" id="vMenu" ref={vRef}>
+      <VerticalMenu
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        setMenuMargin={(margin) => {
+          // Set the margin in index.js based on the callback from VerticalMenu.js
+          vRef.current.style.marginBottom = margin;
+        }}
+      />
+    </div>
+
+    }
     
       
       <div className="lg:flex-row flex-col min-h-screen flex justify-center items-center md:mr-3">
@@ -106,9 +113,9 @@ export default function Home() {
         }
       </>
       
-      {/* { !isMobileMode && 
+      { !isMobileMode && 
         <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-      } */}
+      }
     
 
       </div>      
