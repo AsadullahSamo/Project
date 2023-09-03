@@ -15,7 +15,7 @@ const renderButtons = () => {
       case 5: // For slide 6
         return (
           <div className='text-center'>
-            <h1 className={`lg:mt-0 -mt-96 ${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Excerpts </h1> 
+            <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Excerpts </h1> 
             <br />
             <h1 className={`${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Rat Park </h1> 
             <ul className={`m-2 flex mr-12 justify-evenly gap-7 flex-wrap mb-5 ${styles.btnUl}`}>
@@ -44,7 +44,7 @@ const renderButtons = () => {
       case 6: // For slide 7
       return (
           <div className='text-center'>
-            <h1 className={`lg:mt-0 -mt-96 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Podcasts </h1> 
+            <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Podcasts </h1> 
             <br />
             <p className={`mb-2 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Rare Bird Radio - Conversation with Tyler Knight </p> 
             <ul className={`mb-10 flex justify-start gap-3 ${styles.btnUl}`}>
@@ -81,7 +81,7 @@ const renderButtons = () => {
         return (
           <div className='text-justify mt-36'>
           
-            <p className={`lg:mt-0 -mt-96 ${styles.fontFamily} text-slate-200 text-[20px] text-center m-auto w-[80%] font-semibold`}> Adam Novak is the author of the novels Rat Park, The Non-Pro, Freaks of the Industry, and Take Fountain. He divides his time between Beachwood Canyon and Fort Washington, Maryland. </p> 
+            <p className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-slate-200 text-[20px] text-center m-auto w-[80%] font-semibold`}> Adam Novak is the author of the novels Rat Park, The Non-Pro, Freaks of the Industry, and Take Fountain. He divides his time between Beachwood Canyon and Fort Washington, Maryland. </p> 
             <br />
             <ul className={`flex justify-start gap-3 mb-10 ${styles.btnUl}`}>
                 <Button btnText="Email me" href="mailto:anovak@icloud.com"/>
