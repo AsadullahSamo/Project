@@ -12,7 +12,7 @@ const [activeIndex, setActiveIndex] = useState(0);
 
 const renderButtons = () => {
     switch (props.activeIndex) {
-      case 5: // For slide 5
+      case 5: // For slide 6
         return (
           <div className='text-center'>
             <h1 className={`lg:mt-0 -mt-96 ${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Excerpts </h1> 
@@ -96,9 +96,12 @@ const renderButtons = () => {
     }
 }
 
+  
+
 const [prevIndex, setPrevIndex] = useState(0);
 
   useEffect(() => {
+    
     let section1 = document.getElementById("section1");
     section1.classList.add(prevIndex < props.activeIndex ? "animate__slideInRight" : "animate__slideInLeft");
 
