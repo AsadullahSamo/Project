@@ -72,19 +72,20 @@ export default function Home() {
 
     <main className="text-[#b7c7d8] bg-[#19191a]">
     
-    { isMobileMode &&
-      <div className="mt-5" id="vMenu" ref={vRef}>
-      <VerticalMenu
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        setMenuMargin={(margin) => {
-          // Set the margin in index.js based on the callback from VerticalMenu.js
-          vRef.current.style.marginBottom = margin;
-        }}
-      />
-    </div>
-
-    }
+    {isMobileMode ? (
+          <div className="mt-5" id="vMenu" ref={vRef}>
+            <VerticalMenu
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              setMenuMargin={(margin) => {
+                // Set the margin in index.js based on the callback from VerticalMenu.js
+                vRef.current.style.marginBottom = margin;
+              }}
+            />
+          </div>
+        ) : (
+          <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+    )}
     
       
       <div className="lg:flex-row flex-col min-h-screen flex justify-center items-center md:mr-3">
@@ -105,9 +106,9 @@ export default function Home() {
         }
       </>
       
-      { !isMobileMode && 
+      {/* { !isMobileMode && 
         <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-      }
+      } */}
     
 
       </div>      
