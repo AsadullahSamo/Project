@@ -11,7 +11,7 @@ const [activeIndex, setActiveIndex] = useState(0);
 
 
 const renderButtons = () => {
-    switch (props.activeIndex) {
+    switch (props.activeIndex) {       
       case 5: // For slide 6
         return (
           <div className='text-center'>
@@ -127,7 +127,7 @@ const [prevIndex, setPrevIndex] = useState(0);
         </section>
       
       
-      <section className={`w-[79%] pt-10 flex flex-col justify-center`}> {/* h-[93vh]  w-[79%]*/}
+      <section className={`w-[79%] lg:mt-10 -mt-48 flex flex-col justify-center`}> 
           
 
         <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
