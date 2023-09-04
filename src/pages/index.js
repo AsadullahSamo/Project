@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import styles from '../styles/Home.module.css'
 import { TypeAnimation } from "react-type-animation";
+import TypingAnimation from "@/components/TypingAnimation";
 import VerticalMenu from "@/components/VerticalMenu";
 
 
@@ -34,7 +35,13 @@ export default function Home() {
   const bgColorSection1 = ["#232d36", "#b7c7d8", "#27212e", "#2c2a28", "#161617", "#000", "#000", "#000", "#000"];
   const bgColorSection2 = ["#27323c", "#162b42", "#2b2533", "#312f2d", "#19191a", "#000", "#000", "#000", "#000"];
   const href = ["https://a.co/d/0p21mCR", "https://www.simonandschuster.com/books/The-Non-Pro/Adam-Novak/9781627934473", "https://a.co/d/a9RdKLg", "https://a.co/d/hEKXbFR", "https://a.co/d/a6r7baw", "", "", "", ""]
-
+  const sequence=[
+                "\"The craziest goddamn thing I've read in a long time.\"  \n ~ Alexander Payne \n Academy-Award winning writer/director of Sideways and The Descendants", 1000,
+                "\" Strange genius mixed with stomach-turning madness. \" \n ~ Matt Greenberg \n screenwriter of 1408 and Pet Sematary", 1000,
+                "\"So successfully strange it's almost its own genre. Holding a mirror, if not a hall of mirrors to our culture where we disappear and find ourselves at the same time.\" \n ~ Jerry Stahl \n author of Permanent Midnight and Bad Sex on Speed", 1000,
+                "I'm sniffing a breakthrough. It's like Bret Easton Ellis and Philip K. Dick had a baby, and the baby wrote a book. \" \n ~ Arias Janigan \n author of Waiting for Lipchitz at Chateau Marmont", 1000,
+                "\" Adam Novak has a merciless eye for a society in which striving replaces every consideration of morality. \" ~ Michael Tolkin \n AUTHOR OF THE PLAYER", 1000
+            ];
   const [isMobileMode, setIsMobileMode] = useState(false);
   const checkMobileMode = () => {
       if(window.innerWidth <= 824){
@@ -122,19 +129,24 @@ export default function Home() {
 
       <div className={`${styles.font} text-slate-300 w-[70%] m-auto`}>
         {activeIndex < 5 && 
+            
             <TypeAnimation
             sequence={[
-                "\"The craziest goddamn thing I've read in a long time.\"  \n ~ Alexander Payne \n Academy-Award winning writer/director of Sideways and The Descendants", 1000,
-                "\" Strange genius mixed with stomach-turning madness. \" \n ~ Matt Greenberg \n screenwriter of 1408 and Pet Sematary", 1000,
-                "\"So successfully strange it's almost its own genre. Holding a mirror, if not a hall of mirrors to our culture where we disappear and find ourselves at the same time.\" \n ~ Jerry Stahl \n author of Permanent Midnight and Bad Sex on Speed", 1000,
-                "I'm sniffing a breakthrough. It's like Bret Easton Ellis and Philip K. Dick had a baby, and the baby wrote a book. \" \n ~ Arias Janigan \n author of Waiting for Lipchitz at Chateau Marmont", 1000,
+                "\"The craziest goddamn thing I've read in a long time.\"  \n ~ Alexander Payne \n ACADEMY-AWARD WINNING WRITER/DIRECTOR OF SIDEWAYS AND THE DESCENDANTS", 1000,
+                "\" Strange genius mixed with stomach-turning madness. \" \n ~ Matt Greenberg \n SCREENWRITER OF 1408 AND PET SEMATARY", 1000,
+                "\"So successfully strange it's almost its own genre. Holding a mirror, if not a hall of mirrors to our culture where we disappear and find ourselves at the same time.\" \n ~ Jerry Stahl \n AUTHOR OF PERMANENT MIDNIGHT AND BAD SEX ON SPEED", 1000,
+                "I'm sniffing a breakthrough. It's like Bret Easton Ellis and Philip K. Dick had a baby, and the baby wrote a book. \" \n ~ Arias Janigan \n AUTHOR OF WAITING FOR LIPCHITZ AT CHATEAU MARMONT", 1000,
                 "\" Adam Novak has a merciless eye for a society in which striving replaces every consideration of morality. \" ~ Michael Tolkin \n AUTHOR OF THE PLAYER", 1000
             ]}
-            speed={50}
+            speed={70}
+            omitDeletionAnimation={true}
             style={{ whiteSpace: 'pre-line'}}
-            repeat={Infinity}
+            repeat={0}
             />
+
         }
+
+        
       </div>
     </main>
 

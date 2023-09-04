@@ -46,7 +46,7 @@ const renderButtons = () => {
           <div className='text-center'>
             <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Podcasts </h1> 
             <br />
-            <p className={`mb-2 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Rare Bird Radio - Conversation with Tyler Knight </p> 
+            <p className={`mb-2 mr-5 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Rare Bird Radio - Conversation with Tyler Knight </p> 
             <ul className={`mb-10 flex justify-start gap-3 ${styles.btnUl}`}>
                 <Button btnText="Sound Cloud" href="https://soundcloud.com/rarebirdlit/adam-novak-in-conversation-with-tyler-knight"/>
                 <Button btnText="iTunes" href="https://podyssey.fm/podcast/itunes1024191458/episode17505388-Novak-conversation-Tyler-Knight-Rare-Bird-Radio"/>
@@ -123,7 +123,7 @@ const [prevIndex, setPrevIndex] = useState(0);
           className={`lg:mt-5 mt-10 w-[79%] h-[90vh] animate__animated`}
           // style={{ backgroundColor: props.bgColorSection1 }}
         >
-          <img src={`/assets/${props.img}`} alt={props.alt} className={`${styles.img} object-cover`} loading='lazy'/>
+          <img src={`/assets/${props.img}`} alt={props.alt} className={`${styles.img} object-contain mx-auto h-full`} loading='lazy'/>
         </section>
       
       
