@@ -79,7 +79,7 @@ const renderButtons = () => {
         );
       case 8: // For slide 8
         return (
-          <div className='text-justify mt-36'>
+          <div className='text-justify lg:mt-24 mt-48'>
           
             <p className={`lg:mt-0 -mt-64 ${styles.fontFamily} text-slate-200 text-[20px] text-center m-auto w-[80%] font-semibold`}> Adam Novak is the author of the novels Rat Park, The Non-Pro, Freaks of the Industry, and Take Fountain. He divides his time between Beachwood Canyon and Fort Washington, Maryland. </p> 
             <br />
@@ -127,7 +127,7 @@ const [prevIndex, setPrevIndex] = useState(0);
         </section>
       
       
-      <section className={`w-[79%] lg:mt-10 -mt-48 flex flex-col justify-center`}> 
+      <section className={`w-[79%] lg:mt-10 -mt-44 flex flex-col justify-center`}> 
           
 
         <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
