@@ -127,7 +127,7 @@ const [prevIndex, setPrevIndex] = useState(0);
         </section>
       
       
-      <section className={`w-[79%] bg-[${props.bgColorSection2}] flex flex-col justify-center`}> {/* h-[93vh]  w-[79%]*/}
+      <section className={`w-[79%] pt-10 flex flex-col justify-center`}> {/* h-[93vh]  w-[79%]*/}
           
 
         <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         

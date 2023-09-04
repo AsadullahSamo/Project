@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import styles from '../styles/Home.module.css'
 import { TypeAnimation } from "react-type-animation";
-import TypingAnimation from "@/components/TypingAnimation";
 import VerticalMenu from "@/components/VerticalMenu";
+import HorizontalMenu from "@/components/HorizontalMenu";
 
 
 export default function Home() {
@@ -86,6 +86,10 @@ export default function Home() {
     </Head>
 
     <main className="text-[#b7c7d8] bg-[#19191a]">
+    {
+        !isMobileMode && 
+        <HorizontalMenu activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+      }
     
     { isMobileMode &&
       <div className="mt-5" id="vMenu" ref={vRef}>
@@ -120,10 +124,10 @@ export default function Home() {
         }
       </>
       
-      { !isMobileMode && 
+      {/* { !isMobileMode && 
         <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-      }
-    
+      } */}
+
 
       </div>      
 
