@@ -43,7 +43,7 @@ const renderButtons = () => {
         );
       case 6: // For slide 7
       return (
-          <div className='text-center mt-12'>
+          <div className='text-center mt-24'>
             <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Podcasts </h1> 
             <br />
             <p className={`mb-2 mr-5 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Rare Bird Radio - Conversation with Tyler Knight </p> 
@@ -127,7 +127,7 @@ const [prevIndex, setPrevIndex] = useState(0);
         </section>
       
       
-      <section className={`w-[79%] lg:mt-10 -mt-48 flex flex-col justify-center`}> 
+      <section className={`w-[79%] lg:mt-10 -mt-36 flex flex-col justify-center`}> 
           
 
         <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
