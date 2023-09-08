@@ -1,9 +1,7 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation'
 import { useState, useEffect, useRef } from 'react'
 import styles from '../styles/Home.module.css'
 import Button from './Button'
-import Navbar from './Navbar'
 export default function Slide(props) {
 
   
@@ -15,9 +13,9 @@ const renderButtons = () => {
       case 5: // For slide 6
         return (
           <div className='text-center mt-12'>
-            <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Excerpts </h1> 
+            <h1 className={`lg:mt-0 -mt-80 ${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Excerpts </h1> 
             <br />
-            <h1 className={`${styles.fontFamily} text-slate-300 text-[33px] text-center font-semibold`}> Rat Park </h1> 
+            <h1 className={`${styles.fontFamily} text-white text-[33px] text-center font-semibold`}> Rat Park </h1> 
             <ul className={`m-2 flex mr-12 justify-evenly gap-7 flex-wrap mb-5 ${styles.btnUl}`}>
                 <Button btnText="Excerpt1" href="https://theartifactuals.com/rat-park/"/>
                 <Button btnText="Excerpt2" href="https://theartifactuals.com/excerpt-2-from-rat-park/ "/>
@@ -112,8 +110,6 @@ const [prevIndex, setPrevIndex] = useState(0);
 
     setPrevIndex(props.activeIndex);
   }, [props.activeIndex]);
-
-  // Function to get animation class
   
 
   return (
@@ -121,7 +117,6 @@ const [prevIndex, setPrevIndex] = useState(0);
       
         <section id='section1'
           className={`lg:mt-5 mt-10 w-[79%] h-[90vh] animate__animated`}
-          // style={{ backgroundColor: props.bgColorSection1 }}
         >
           <img src={`/assets/${props.img}`} alt={props.alt} className={`${styles.img} object-contain mx-auto h-full`} loading='lazy'/>
         </section>
@@ -133,12 +128,10 @@ const [prevIndex, setPrevIndex] = useState(0);
         <p style={{marginBottom: '100px' }} className={`${styles.font} md:text-slate-300 w-[80%]`}>{props.pText}</p>         
         
         <div className={`flex justify-center my-8 ${styles.section2Margin}`}>
-          {/* <button className={`transition-all duration-1000 ${styles.btn} m-auto bg-[#0974d4] font-sans text-[22px] text-[#fff] px-3 py-1`} > {props.btnText} </button> */}
           {renderButtons()}
         </div>
         
         
-      {/* <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>  */}
       </section>
     </>    
   )
