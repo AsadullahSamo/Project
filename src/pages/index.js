@@ -77,9 +77,12 @@ export default function Home() {
   return (
 
     <>
+    <html amp lang="en"/> 
     <Head>
       <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="canonical" href="index.html"/>   
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/assets/favicon.png" />
       <title> Take Novak </title>
